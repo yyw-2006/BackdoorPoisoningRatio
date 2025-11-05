@@ -1,0 +1,45 @@
+{
+  "dataset_path": "poisoned_datasets\\0.5poisoned_dataset",
+  "output_dir": "modelmassage\\0.5backdoor_model",
+  "image_size": [
+    224,
+    224
+  ],
+  "batch_size": 32,
+  "epochs": 15,
+  "validation_split": 0.2,
+  "seed": 42,
+  "model": {
+    "type": "transfer_learning",
+    "base_model": "mobilenetv2",
+    "trainable_base": false
+  },
+  "optimizer": {
+    "name": "adam",
+    "learning_rate": 0.001,
+    "momentum": 0.9
+  },
+  "augmentation": {
+    "rotation_range": 20,
+    "width_shift_range": 0.2,
+    "height_shift_range": 0.2,
+    "shear_range": 0.2,
+    "zoom_range": 0.2,
+    "horizontal_flip": true
+  },
+  "callbacks": {
+    "early_stopping": {
+      "enabled": true,
+      "patience": 5
+    },
+    "reduce_lr": {
+      "enabled": true,
+      "factor": 0.5,
+      "patience": 3,
+      "min_lr": 1e-07
+    },
+    "tensorboard": {
+      "enabled": true
+    }
+  }
+}

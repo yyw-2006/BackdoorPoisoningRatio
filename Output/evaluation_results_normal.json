@@ -1,0 +1,8 @@
+{
+  "timestamp": "2025-11-04T16:32:18.107304",
+  "model_path": "models/normal_model.h5",
+  "clean_dataset_accuracy": 0.9788960814476013,
+  "poisoned_dataset_attack_success_rate": 0.022727272727272728,
+  "clean_accuracy_percentage": "97.89%",
+  "attack_success_rate_percentage": "2.27%"
+}

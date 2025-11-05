@@ -1,0 +1,8 @@
+{
+  "timestamp": "2025-11-04T16:31:58.556735",
+  "model_path": "models/0.2backdoor_model.h5",
+  "clean_dataset_accuracy": 0.9724025726318359,
+  "poisoned_dataset_attack_success_rate": 0.07467532467532467,
+  "clean_accuracy_percentage": "97.24%",
+  "attack_success_rate_percentage": "7.47%"
+}
